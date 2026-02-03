@@ -61,7 +61,7 @@ The Fraud Alert Manager API is a pre-built service that simulates fraud alerting
 Before we start, familiarize yourself with the API documentation provided by the Swagger UI at your Container Apps URL. The script below will compose the URL for you. Make sure to replace the placeholder with your resource group name before running:
 
 ```bash
-RG=<your_resource_group_name>
+RG=rg-user01-Lotz
 CONTAINER_APP=$(az containerapp list --resource-group $RG --query "[0].name" -o tsv)
 CONTAINER_APP_URL=$(az containerapp show --name $CONTAINER_APP --resource-group $RG --query properties.configuration.ingress.fqdn -o tsv)
 echo "Swagger UI URL: http://$CONTAINER_APP_URL/v1/swagger-ui/index.html"
